@@ -34,10 +34,10 @@ import com.jagan.formapp.ui.theme.blueColor
 fun PpeExp() {
     var safetyglasses by rememberSaveable { mutableStateOf(false) }
     var barricades by rememberSaveable { mutableStateOf(false) }
+    var isolation by rememberSaveable { mutableStateOf(false) }
     val equipment = arrayOf(
         "Option 1", "Option 2", "Option 3", "Option 4"
     )
-
 
     Column(
         Modifier
@@ -112,8 +112,8 @@ fun PpeExp() {
             horizontalArrangement = Arrangement.Start
         ) {
             Checkbox(
-                checked = safetyglasses,
-                onCheckedChange = { safetyglasses = it },
+                checked = isolation,
+                onCheckedChange = { isolation = it },
                 colors = CheckboxDefaults.colors(
                     checkedColor = blueColor,
                 ),
